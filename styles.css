@@ -420,9 +420,10 @@ h3 {
   position: relative;
   display: block;
   overflow: hidden;
+  min-height: 340px;
   border-radius: var(--radius);
   border: 1px solid var(--line);
-  background: var(--white);
+  background: var(--white) center / cover no-repeat;
   box-shadow: 0 16px 40px rgba(36, 68, 107, 0.08);
   color: inherit;
   text-decoration: none;
