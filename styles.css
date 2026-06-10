@@ -439,49 +439,74 @@ h3 {
 
 .testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
   margin-top: 2rem;
 }
 
 .testimonial-card {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: flex-end;
   overflow: hidden;
   min-height: 340px;
   border-radius: var(--radius);
   border: 1px solid var(--line);
   background: var(--white) center / cover no-repeat;
   box-shadow: 0 16px 40px rgba(36, 68, 107, 0.08);
-  color: inherit;
+  color: var(--white);
   text-decoration: none;
 }
 
-.testimonial-card img {
-  width: 100%;
-  height: 340px;
-  object-fit: cover;
-  transition: transform 0.25s ease;
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 24, 44, 0.08) 0%, rgba(10, 24, 44, 0.58) 100%);
 }
 
-.testimonial-card:hover img {
-  transform: scale(1.02);
+.testimonial-card-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1.2rem;
+}
+
+.testimonial-kicker {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.86;
+}
+
+.testimonial-card strong {
+  display: block;
+  max-width: 18ch;
+  font-size: 1.1rem;
+  line-height: 1.15;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-2px);
 }
 
 .play-badge {
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
   display: inline-flex;
   align-items: center;
+  align-self: flex-start;
   gap: 0.45rem;
   padding: 0.55rem 0.85rem;
   border-radius: 999px;
-  background: rgba(36, 68, 107, 0.92);
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.24);
   color: var(--white);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 900;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(6px);
 }
 
 .social-strip {
