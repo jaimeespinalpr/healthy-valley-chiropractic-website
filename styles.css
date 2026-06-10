@@ -258,6 +258,34 @@ h3 {
   border: 1px solid rgba(55, 95, 145, 0.24);
 }
 
+.trust-strip {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 1rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.trust-item {
+  padding: 1rem 1.15rem;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 30px rgba(36, 68, 107, 0.06);
+}
+
+.trust-item strong {
+  display: block;
+  color: var(--blue);
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.trust-item span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .intro-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -609,6 +637,7 @@ dl dd {
   }
 
   .intro-cards,
+  .trust-strip,
   .section-grid,
   .service-grid,
   .testimonial-grid,
