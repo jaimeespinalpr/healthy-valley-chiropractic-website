@@ -1,0 +1,2 @@
+# Ignore local preview files if needed.
+.DS_Store
